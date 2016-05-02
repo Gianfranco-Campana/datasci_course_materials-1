@@ -1,0 +1,15 @@
+[
+  {
+    "stylers": [
+      { "saturation": -100 },
+      { "lightness": 40 }
+    ]
+  },{
+    "featureType": "poi.attraction",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#ff8080" },
+      { "gamma": 0.5 }
+    ]
+  }
+]

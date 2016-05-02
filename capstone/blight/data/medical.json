@@ -1,0 +1,27 @@
+[
+  {
+    "stylers": [
+      { "saturation": -100 },
+      { "lightness": 40 }
+    ]
+  },{
+    "featureType": "poi.medical",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#ff0000" },
+      { "gamma": 0.5 }
+    ]
+  }
+]
+
+There are four files you will use in this project:
+
+detroit-blight-violations.csv : Each record is a blight violation incident.
+detroit-demolition-permits.tsv: Each record represents a permit for a demolition.
+detroit-311.csv: Each record represents a 311 call, typically a complaint
+detroit-crime.csv: Each record represents a criminial incident.
+
+For each building, you need to extract a richer set of features from the incident data and construct a feature vector. The feature vector will include at least two columns: the building_id and the label. You will create many additional columns that the model will use to predict the label. These features may be numeric, text-derived, or otherwise computed. Feature engineering is what makes or breaks analytics projects, not the method.
+
+The performance of your model will be highly dependent on the features you select -- you should expect to return to this step as you iterate.
+
