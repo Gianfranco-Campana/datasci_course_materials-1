@@ -176,7 +176,16 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-project-aims-to-predict-building-abandonment-(&#8220;blight&#8221;)-based-on-a-number-of-public-datasets,-including-criminal-incidents,-permit-violations,-and-more.">The project aims to predict building abandonment (&#8220;blight&#8221;) based on a number of public datasets, including criminal incidents, permit violations, and more.<a class="anchor-link" href="#The-project-aims-to-predict-building-abandonment-(&#8220;blight&#8221;)-based-on-a-number-of-public-datasets,-including-criminal-incidents,-permit-violations,-and-more.">&#182;</a></h2><h4 id="This-project-grew-out-of-a-roundtable-discussion-with-Socrata-and-city-analytics-leaders-in-Detroit,-Kansas-City,-New-Orleans,-Boston,-and-more.">This project grew out of a roundtable discussion with Socrata and city analytics leaders in Detroit, Kansas City, New Orleans, Boston, and more.<a class="anchor-link" href="#This-project-grew-out-of-a-roundtable-discussion-with-Socrata-and-city-analytics-leaders-in-Detroit,-Kansas-City,-New-Orleans,-Boston,-and-more.">&#182;</a></h4><h4 id="These-cities-shared-a-common-interest-in-being-proactive-about-identifying-buildings-at-risk-for-abandonment-and-taking-steps-to-prevent-the-harms-that-arise-as-a-result.">These cities shared a common interest in being proactive about identifying buildings at risk for abandonment and taking steps to prevent the harms that arise as a result.<a class="anchor-link" href="#These-cities-shared-a-common-interest-in-being-proactive-about-identifying-buildings-at-risk-for-abandonment-and-taking-steps-to-prevent-the-harms-that-arise-as-a-result.">&#182;</a></h4>
+<h1 id="Blight-Fight">Blight Fight<a class="anchor-link" href="#Blight-Fight">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-project-aims-to-predict-building-abandonment-(&#8220;blight&#8221;)-based-on-a-number-of-public-datasets,-including-criminal-incidents,-permit-violations,-and-more."><em>The project aims to predict building abandonment (&#8220;blight&#8221;) based on a number of public datasets, including criminal incidents, permit violations, and more.</em><a class="anchor-link" href="#The-project-aims-to-predict-building-abandonment-(&#8220;blight&#8221;)-based-on-a-number-of-public-datasets,-including-criminal-incidents,-permit-violations,-and-more.">&#182;</a></h2><h4 id="This-project-grew-out-of-a-roundtable-discussion-with-Socrata-and-city-analytics-leaders-in-Detroit,-Kansas-City,-New-Orleans,-Boston,-and-more.-These-cities-shared-a-common-interest-in-being-proactive-about-identifying-buildings-at-risk-for-abandonment-and-taking-steps-to-prevent-the-harms-that-arise-as-a-result.">This project grew out of a roundtable discussion with Socrata and city analytics leaders in Detroit, Kansas City, New Orleans, Boston, and more. These cities shared a common interest in being proactive about identifying buildings at risk for abandonment and taking steps to prevent the harms that arise as a result.<a class="anchor-link" href="#This-project-grew-out-of-a-roundtable-discussion-with-Socrata-and-city-analytics-leaders-in-Detroit,-Kansas-City,-New-Orleans,-Boston,-and-more.-These-cities-shared-a-common-interest-in-being-proactive-about-identifying-buildings-at-risk-for-abandonment-and-taking-steps-to-prevent-the-harms-that-arise-as-a-result.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -196,10 +205,10 @@ div#notebook {
 <p>For each incident type, the location is included as a latitude, longitude pair and various timestamps are included, typically in the format mm/dd/yyyy hh:mm:ss PM, for example 03/11/2015 04:23:11 PM.</p>
 <p>The files are made available directly as Coursera assets, and forked in this reposotory.</p>
 <p>The location of each incident is provided as geo-coordinates: a (latitude, longitude) pair. The project involves classifying the blight risk of specific buildings, so a first step is to parse the geo coordinate data and use these coordinates to try to cluster all incidents that occurred, ideally, at the same address.</p>
-<h4 id="Creation-of-&quot;virtual-building&quot;">Creation of "virtual building"<a class="anchor-link" href="#Creation-of-&quot;virtual-building&quot;">&#182;</a></h4><p>We will create "virtual building" clustering te demolition coordinates by the aversine distance (a geodetic measurement of te geographic distance), and then tracking an alpha hull (ahull with flat edges) using the outer poit of each cluster created by the clustering algorithm (based on haversine distance).</p>
+<h4 id="Creation-of-&quot;virtual-building&quot;">Creation of "virtual building"<a class="anchor-link" href="#Creation-of-&quot;virtual-building&quot;">&#182;</a></h4><p>We will create "virtual building" clustering te demolition coordinates by the haversine distance (a geodetic measurement of te geographic distance), and then tracking an alpha hull (ahull with flat edges) using the outer points of each cluster created by the clustering algorithm (based on haversine distance).</p>
 <p>This will allow us to get a valid, specific "virtual building", much more effective then it could be possible with other methods (i.e. draw outer circle lowering the coordinates precision, or drawing box/rectangles starting from a coordinates point).</p>
 <p>This is because those other methods are "blinded", expanding the "virtual building" also in some direction not related to the greater density areas of blight coordinates existing (from demolition permits dataset).</p>
-<p>The method here used, takes in account for each cluster a higher geographic density of blighted coordinates, therefore performing as a powerful predictor of blighting.</p>
+<p>The method here used, takes in account for each cluster a higher geographic density of blighted coordinates, therefore performing as an effective predictor of blighting.</p>
 
 </div>
 </div>
